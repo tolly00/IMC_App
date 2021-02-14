@@ -1,18 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome in my IMC Application"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textColor="#FF0000"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            />
+        <EditText
+            android:id="@+id/poids"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Poids"
+            android:inputType="numberDecimal"
+            />
+
+        <EditText
+            android:id="@+id/taille"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Taille"
+            android:layout_marginTop="10dp"
+            android:inputType="numberDecimal"
+            />
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/radio2"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mètre"
+                />
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Centimètre"
+                />
+        </RadioGroup>
+        <CheckBox
+            android:id="@+id/mega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mega fonction !"
+            android:layout_marginTop="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:id="@+id/calcul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculer l'IMC"
+                android:layout_marginTop="10dp"
+
+                />
+            <Button
+                android:id="@+id/raz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommencer"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note:"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            />
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Vous devez cliquer sur le bouton « Calculer l'IMC » pour obtenir un résultat."
+            />
+    </LinearLayout>
+
+
+
