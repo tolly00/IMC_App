@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="Recommencer"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="30dp"
                 />
         </LinearLayout>
         <TextView
